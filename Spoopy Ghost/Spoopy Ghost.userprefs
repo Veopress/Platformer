@@ -2,8 +2,7 @@
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SpoopyGo.cs">
     <Files>
-      <File FileName="Assets\SpoopyGo.cs" Line="17" Column="21" />
-      <File FileName="..\..\Space Shooter\Assets\Script\PlayerController.cs" Line="95" Column="97" />
+      <File FileName="Assets\SpoopyGo.cs" Line="53" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

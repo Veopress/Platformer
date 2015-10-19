@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\enemyController.cs" />
      <Compile Include="Assets\Scripts\fallingPlatform.cs" />
+     <Compile Include="Assets\SpoopyGo.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

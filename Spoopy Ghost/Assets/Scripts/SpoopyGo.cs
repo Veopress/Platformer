@@ -6,7 +6,7 @@ public class SpoopyGo : MonoBehaviour {
 	Rigidbody2D rb;
 	Animator anim;
 	public bool leftKey= false, rightKey = false, upKey = false, isSecondJump = false, firstJump = true, phaseKey = false, facingRight = false, stale = false;
-	public float forceMagnitude = 13f, maxVelocity = 10f;
+	public float forceMagnitude = 5F, maxVelocity = 6F;
 	private int timer = 0;
 
 	// Use this for initialization
@@ -105,7 +105,7 @@ public class SpoopyGo : MonoBehaviour {
 			stale = true;
 			upKey = false;
 			rb.velocity = new Vector2(rb.velocity.x,0);
-			rb.AddRelativeForce (new Vector2 (0, forceMagnitude * 30));
+			rb.AddRelativeForce (new Vector2 (0, 300));
 			timer = 20;
 			if(!firstJump){
 				isSecondJump = true;
@@ -115,7 +115,7 @@ public class SpoopyGo : MonoBehaviour {
 		}
 		if (timer > 0)
 			timer--;
-		rb.AddRelativeForce (new Vector2 (forceMagnitude * Input.GetAxis("Horizontal"),0));
+		rb.velocity = (new Vector2 (forceMagnitude * Input.GetAxis("Horizontal"),rb.velocity.y));
 
 		if (Mathf.Abs (rb.velocity.magnitude) / Time.deltaTime > maxVelocity)
 			rb.velocity.Scale (new Vector2 (maxVelocity * Time.deltaTime, maxVelocity * Time.deltaTime));

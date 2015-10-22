@@ -1,10 +1,10 @@
-Mono path[0] = 'C:/Users/student/Desktop/Game Programming/Platformer/Spoopy Ghost/Spoopy Ghost_Data/Managed'
-Mono path[1] = 'C:/Users/student/Desktop/Game Programming/Platformer/Spoopy Ghost/Spoopy Ghost_Data/Mono'
-Mono config path = 'C:/Users/student/Desktop/Game Programming/Platformer/Spoopy Ghost/Spoopy Ghost_Data/Mono/etc'
-PlayerConnection initialized from C:/Users/student/Desktop/Game Programming/Platformer/Spoopy Ghost/Spoopy Ghost_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55157
-Multi-casting "[IP] 10.32.61.164 [Port] 55157 [Flags] 2 [Guid] 3916302080 [EditorId] 762484677 [Version] 1048832 [Id] WindowsPlayer(CSE3-164) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [10.32.61.164:55157]
+Mono path[0] = 'C:/Users/student/Desktop/Game Programming/Platformer2/Spoopy Ghost/Spoopy Ghost_Data/Managed'
+Mono path[1] = 'C:/Users/student/Desktop/Game Programming/Platformer2/Spoopy Ghost/Spoopy Ghost_Data/Mono'
+Mono config path = 'C:/Users/student/Desktop/Game Programming/Platformer2/Spoopy Ghost/Spoopy Ghost_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/student/Desktop/Game Programming/Platformer2/Spoopy Ghost/Spoopy Ghost_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55013
+Multi-casting "[IP] 10.32.61.164 [Port] 55013 [Flags] 2 [Guid] 3930268451 [EditorId] 762484677 [Version] 1048832 [Id] WindowsPlayer(CSE3-164) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [10.32.61.164:55013]
 Initialize engine version: 5.1.2f1 (afd2369b692a)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -13,36 +13,17 @@ Direct3D:
     Vendor:   Intel
     VRAM:     128 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.063 seconds
+Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.536 seconds
 desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-<RI> Initialized touch support.
-Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer\Spoopy Ghost\Spoopy Ghost_Data\Managed\System.dll (this message is harmless)
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.264072 ms
-System memory in use before: 12.4 MB.
-System memory in use after: 12.5 MB.
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 445.
-Total: 0.204029 ms (FindLiveObjects: 0.039895 ms CreateObjectMapping: 0.018548 ms MarkObjects: 0.135786 ms  DeleteObjects: 0.006649 ms)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.036945 ms
-System memory in use before: 12.4 MB.
-System memory in use after: 12.5 MB.
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 445.
-Total: 0.300969 ms (FindLiveObjects: 0.081541 ms CreateObjectMapping: 0.016798 ms MarkObjects: 0.190730 ms  DeleteObjects: 0.009799 ms)
-

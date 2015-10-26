@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Platformer-master\Jumpy Squirrel\Assets\scripts\dude.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpoopyGo.cs">
     <Files>
-      <File FileName="..\..\Platformer-master\Jumpy Squirrel\Assets\scripts\dude.cs" Line="72" Column="4" />
+      <File FileName="Assets\Scripts\enemyController.cs" Line="30" Column="11" />
+      <File FileName="Assets\Scripts\SpoopyGo.cs" Line="15" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

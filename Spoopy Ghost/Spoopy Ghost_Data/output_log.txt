@@ -2,9 +2,9 @@ Mono path[0] = 'C:/Users/student/Desktop/Game Programming/Platformer2/Spoopy Gho
 Mono path[1] = 'C:/Users/student/Desktop/Game Programming/Platformer2/Spoopy Ghost/Spoopy Ghost_Data/Mono'
 Mono config path = 'C:/Users/student/Desktop/Game Programming/Platformer2/Spoopy Ghost/Spoopy Ghost_Data/Mono/etc'
 PlayerConnection initialized from C:/Users/student/Desktop/Game Programming/Platformer2/Spoopy Ghost/Spoopy Ghost_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55013
-Multi-casting "[IP] 10.32.61.164 [Port] 55013 [Flags] 2 [Guid] 3930268451 [EditorId] 762484677 [Version] 1048832 [Id] WindowsPlayer(CSE3-164) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [10.32.61.164:55013]
+PlayerConnection initialized network socket : 0.0.0.0 55458
+Multi-casting "[IP] 10.32.61.164 [Port] 55458 [Flags] 2 [Guid] 1501135766 [EditorId] 762484677 [Version] 1048832 [Id] WindowsPlayer(CSE3-164) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [10.32.61.164:55458]
 Initialize engine version: 5.1.2f1 (afd2369b692a)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -23,7 +23,10 @@ Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy 
 Loading C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.536 seconds
+- Completed reload, in  0.082 seconds
 desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\student\Desktop\Game Programming\Platformer2\Spoopy Ghost\Spoopy Ghost_Data\Managed\System.dll (this message is harmless)

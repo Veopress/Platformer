@@ -54,25 +54,32 @@ public class SpoopyGo : MonoBehaviour {
 		if (c.collider.tag.Equals ("enemy")) {
 			die ();
 		} else if (c.collider.tag.Equals ("Memory")) { 
-			end ();
+			loadNextLevel();
 		}
 		isSecondJump = false;
 		firstJump = true;
 	}
 
+<<<<<<< HEAD
 	void phase()
 	{
 		invis = true;
 		ghost.color = new Color (1f, 1f, 1f, 0.5f);
+=======
+	void loadNextLevel(){
+		if(Application.loadedLevelName.Equals("Final Level")){
+			Application.Quit();
+		}
+		Application.LoadLevel (Application.loadedLevelName.Equals("yolo") ? "Level 2" : Application.loadedLevelName.Equals("Level 2") ? "Level 3" : Application.loadedLevelName.Equals("Level 3") ? "Level 4" : Application.loadedLevelName.Equals("Level 4") ? "Final Level" : "yolo");
+	}
+
+	void phase(){
+>>>>>>> d894cc81c61520b70c9f7f11a89a91e50bf8a5fb
 		rb.gravityScale = 0.5f;
 	}
 
 	void die(){
-		Application.LoadLevel("yolo");
-	}
-
-	void end(){
-		Application.Quit();
+		Application.LoadLevel(Application.loadedLevelName);
 	}
 
 	public bool getPhased() {

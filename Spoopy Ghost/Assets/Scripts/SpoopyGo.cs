@@ -5,14 +5,40 @@ public class SpoopyGo : MonoBehaviour {
 
 	Rigidbody2D rb;
 	Animator anim;
-	public bool leftKey= false, rightKey = false, upKey = false, isSecondJump = false, firstJump = true, phaseKey = false, facingRight = false, stale = false;
+	public bool leftKey= false, rightKey = false, upKey = false, isSecondJump = false, firstJump = true, phaseKey = false, facingRight = false, stale = false, grounded = false, invis = false, i1 = false;
+	public Transform groundCheck;
+	float groundRadius = 0.2f;
+	public LayerMask groundThings;
+	private SpriteRenderer ghost;
 	public float forceMagnitude = 5F, maxVelocity = 6F;
 	private int timer = 0;
-
-	// Use this for initialization
+	
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		ghost = this.GetComponent<SpriteRenderer> ();
+	}
+
+	void FixedUpdate()
+	{
+		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, groundThings);
+		anim.SetBool ("Ground", grounded);
+		anim.SetFloat ("vSpeed", rb.velocity.y);
+		anim.SetBool ("Invis", invis);
+		float move = Input.GetAxis ("Horizontal");
+		anim.SetFloat ("Speed", Mathf.Abs (move));
+		if (move > 0 && facingRight)
+			Flip ();
+		else if (move < 0 && !facingRight)
+			Flip ();
+	}
+	
+	void Flip()
+	{
+		facingRight = !facingRight;
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
 
 	void OnTriggerEnter2D(Collider2D c){
@@ -34,7 +60,10 @@ public class SpoopyGo : MonoBehaviour {
 		firstJump = true;
 	}
 
-	void phase(){
+	void phase()
+	{
+		invis = true;
+		ghost.color = new Color (1f, 1f, 1f, 0.5f);
 		rb.gravityScale = 0.5f;
 	}
 
@@ -46,23 +75,6 @@ public class SpoopyGo : MonoBehaviour {
 		Application.Quit();
 	}
 
-	void FixedUpdate(){
-		float move = Input.GetAxis ("Horizontal");
-		anim.SetFloat ("Speed", Mathf.Abs (move));
-		if (move > 0 && facingRight)
-			Flip ();
-		else if (move < 0 && !facingRight)
-			Flip ();
-	}
-
-	void Flip()
-	{
-		facingRight = !facingRight;
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
-	}
-
 	public bool getPhased() {
 		return phaseKey;
 	}
@@ -72,15 +84,24 @@ public class SpoopyGo : MonoBehaviour {
 		transform.rotation = Quaternion.identity;
 
 		//Phasing
-
-		if (Input.GetAxis("Fire3") == 1)
-			phaseKey = true;
-		if (Input.GetAxis("Fire3") != 1)
-			phaseKey = false;
-
 		if (phaseKey) {
-			phase();
+			phase ();
 		}
+
+		if (Input.GetAxis ("Fire3") == 1)
+		{
+			invis = true;
+			phaseKey = true;
+		}
+		if (Input.GetAxis ("Fire3") != 1) 
+		{
+			invis = false;
+			phaseKey = false;
+			ghost.color = new Color (1f, 1f, 1f, 1f);
+		}
+
+
+
 
 
 		// Movement
@@ -102,6 +123,7 @@ public class SpoopyGo : MonoBehaviour {
 		}
 		
 		if (upKey && timer <= 0 && !isSecondJump) {
+			anim.SetBool("Ground", false);
 			stale = true;
 			upKey = false;
 			rb.velocity = new Vector2(rb.velocity.x,0);

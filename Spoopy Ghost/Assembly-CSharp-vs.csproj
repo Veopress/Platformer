@@ -46,11 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Anim.cs" />
      <Compile Include="Assets\Scripts\CamBamJam.cs" />
+     <Compile Include="Assets\Scripts\MeowTime.cs" />
+     <Compile Include="Assets\Scripts\OpeningCameraScript.cs" />
      <Compile Include="Assets\Scripts\SpoopyGo.cs" />
      <Compile Include="Assets\Scripts\enemyController.cs" />
      <Compile Include="Assets\Scripts\fallingPlatform.cs" />
      <Compile Include="Assets\Scripts\kill.cs" />
+     <Compile Include="Assets\Scripts\play.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

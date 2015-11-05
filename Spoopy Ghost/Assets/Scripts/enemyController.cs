@@ -10,6 +10,7 @@ public class enemyController : MonoBehaviour {
 	private MonoBehaviour pChecker;
 	public GameObject player;
 	Animator anim;
+	public AudioSource MeowTime;
 
 
 	// Use this for initialization
@@ -44,6 +45,7 @@ public class enemyController : MonoBehaviour {
 			alerted = false;
 		}
 		if (alerted) {
+
 			if (player.transform.position.x < transform.position.x) {
 				rb.velocity = new Vector2(-speed, 0.0F);
 			} else if (player.transform.position.x > transform.position.x) 
@@ -62,7 +64,17 @@ public class enemyController : MonoBehaviour {
 				anim.applyRootMotion = true;
 			}
 			alerted = true;
+			Meow ();
 		}
+	}
+
+	IEnumerator Meow()
+	{
+		print (Time.time);
+		yield return new WaitForSeconds (1.0f);
+		MeowTime.Play ();
+		print (Time.time);
+
 	}
 
 }

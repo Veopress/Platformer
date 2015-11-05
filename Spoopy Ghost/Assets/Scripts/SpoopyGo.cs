@@ -12,6 +12,7 @@ public class SpoopyGo : MonoBehaviour {
 	private SpriteRenderer ghost;
 	public float forceMagnitude = 5F, maxVelocity = 6F;
 	private int timer = 0;
+	public static int deathcount;
 	
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -60,26 +61,30 @@ public class SpoopyGo : MonoBehaviour {
 		firstJump = true;
 	}
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 	void phase()
 	{
 		invis = true;
 		ghost.color = new Color (1f, 1f, 1f, 0.5f);
-=======
-	void loadNextLevel(){
-		if(Application.loadedLevelName.Equals("Final Level")){
-			Application.Quit();
-		}
-		Application.LoadLevel (Application.loadedLevelName.Equals("yolo") ? "Level 2" : Application.loadedLevelName.Equals("Level 2") ? "Level 3" : Application.loadedLevelName.Equals("Level 3") ? "Level 4" : Application.loadedLevelName.Equals("Level 4") ? "Final Level" : "yolo");
-	}
-
-	void phase(){
->>>>>>> d894cc81c61520b70c9f7f11a89a91e50bf8a5fb
 		rb.gravityScale = 0.5f;
 	}
+//=======
+	void loadNextLevel()
+		{
+			if(Application.loadedLevelName.Equals("Final Level")){
+			Application.Quit();
+		}
+			Application.LoadLevel (Application.loadedLevelName.Equals("yolo") ? "Level 2" : Application.loadedLevelName.Equals("Level 2") ? "Level 3" : Application.loadedLevelName.Equals("Level 3") ? "Level 4" : Application.loadedLevelName.Equals("Level 4") ? "Final Level" : "yolo");
+		}
+	
 
-	void die(){
-		Application.LoadLevel(Application.loadedLevelName);
+	void die()
+	{
+		if (deathcount > 5) {
+			Application.LoadLevel ("EndScreen");
+		}
+		else Application.LoadLevel (Application.loadedLevel);
+		deathcount++;
 	}
 
 	public bool getPhased() {
@@ -121,15 +126,18 @@ public class SpoopyGo : MonoBehaviour {
 			rightKey=true;
 		if (Input.GetAxis("Horizontal") != 1)
 			rightKey=false;*/
-		if (Input.GetAxis ("Jump") == 1 && stale == false) {
+		if (Input.GetAxis ("Jump") == 1 && stale == false) 
+		{
 			upKey = true;
 		}
-		if (Input.GetAxis ("Jump") != 1) {
+		if (Input.GetAxis ("Jump") != 1) 
+		{
 			upKey = false;
 			stale = false;
 		}
 		
-		if (upKey && timer <= 0 && !isSecondJump) {
+		if (upKey && timer <= 0 && !isSecondJump) 
+		{
 			anim.SetBool("Ground", false);
 			stale = true;
 			upKey = false;
@@ -142,11 +150,9 @@ public class SpoopyGo : MonoBehaviour {
 				firstJump = false;
 			}
 		}
-		if (timer > 0)
-			timer--;
+		if (timer > 0) timer--;
 		rb.velocity = (new Vector2 (forceMagnitude * Input.GetAxis("Horizontal"),rb.velocity.y));
-
 		if (Mathf.Abs (rb.velocity.magnitude) / Time.deltaTime > maxVelocity)
-			rb.velocity.Scale (new Vector2 (maxVelocity * Time.deltaTime, maxVelocity * Time.deltaTime));
+		rb.velocity.Scale (new Vector2 (maxVelocity * Time.deltaTime, maxVelocity * Time.deltaTime));
 	}
 }

@@ -16,7 +16,11 @@ public class kill : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other)
 	{
 		if (other.tag == "Player") {
-			Application.LoadLevel("yolo");
+			if(SpoopyGo.deathcount>5)
+			{
+				Application.LoadLevel("EndScreen");
+			}
+			else Application.LoadLevel (Application.loadedLevel);
 		}
 	}
 }

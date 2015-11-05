@@ -48,9 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Anim.cs" />
      <Compile Include="Assets\Scripts\CamBamJam.cs" />
-     <Compile Include="Assets\Scripts\MeowTime.cs" />
      <Compile Include="Assets\Scripts\OpeningCameraScript.cs" />
      <Compile Include="Assets\Scripts\SpoopyGo.cs" />
+     <Compile Include="Assets\Scripts\endgame.cs" />
      <Compile Include="Assets\Scripts\enemyController.cs" />
      <Compile Include="Assets\Scripts\fallingPlatform.cs" />
      <Compile Include="Assets\Scripts\kill.cs" />

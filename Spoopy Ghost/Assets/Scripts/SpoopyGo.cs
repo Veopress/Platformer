@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SpoopyGo : MonoBehaviour {
 
 	Rigidbody2D rb;
 	Animator anim;
-	public bool leftKey= false, rightKey = false, upKey = false, isSecondJump = false, firstJump = true, phaseKey = false, facingRight = false, stale = false, grounded = false, invis = false, i1 = false;
+	public bool leftKey= false, rightKey = false, upKey = false, isSecondJump = false, firstJump = true, phaseKey = false, facingRight = false, stale = false, grounded = false, invis = false, i1 = false, showWindow = false, gotMem = false;
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask groundThings;
@@ -13,11 +14,15 @@ public class SpoopyGo : MonoBehaviour {
 	public float forceMagnitude = 5F, maxVelocity = 6F;
 	private int timer = 0;
 	public static int deathcount;
-	
+	public Image mem;
+	public Button cont;
+	public Rect windowRect = new Rect(1000, 1000, 1000, 1000);
+
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		ghost = this.GetComponent<SpriteRenderer> ();
+		//this.transform.GetComponent<UnityEngine.UI.Canvas>().Image = mem;
 	}
 
 	void FixedUpdate()
@@ -41,6 +46,7 @@ public class SpoopyGo : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+	
 
 	void OnTriggerEnter2D(Collider2D c){
 		if (phaseKey && c.tag.Equals ("Phasable")) {
@@ -51,11 +57,28 @@ public class SpoopyGo : MonoBehaviour {
 		}
 	}
 
+	void showMem()
+	{
+		if (gotMem) 
+		{
+			mem.GetComponent<CanvasGroup> ().alpha = 1f;
+			cont.GetComponent<CanvasGroup> ().alpha = 1f;
+		} 
+		else 
+		{
+			mem.GetComponent<CanvasGroup> ().alpha = 0f;
+			cont.GetComponent<CanvasGroup> ().alpha = 0f;
+		}
+	}
+
 	void OnCollisionEnter2D(Collision2D c){
 		if (c.collider.tag.Equals ("enemy")) {
 			die ();
-		} else if (c.collider.tag.Equals ("Memory")) { 
-			loadNextLevel();
+		} 
+		else if (c.collider.tag.Equals ("Memory")) 
+		{
+			gotMem = true;
+			//loadNextLevel();
 		}
 		isSecondJump = false;
 		firstJump = true;
@@ -93,6 +116,7 @@ public class SpoopyGo : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		showMem ();
 		transform.rotation = Quaternion.identity;
 
 		//Phasing

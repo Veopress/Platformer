@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Anim.cs" />
      <Compile Include="Assets\Scripts\CamBamJam.cs" />
+     <Compile Include="Assets\Scripts\MemContinue.cs" />
      <Compile Include="Assets\Scripts\OpeningCameraScript.cs" />
      <Compile Include="Assets\Scripts\SpoopyGo.cs" />
      <Compile Include="Assets\Scripts\endgame.cs" />

@@ -64,17 +64,17 @@ public class enemyController : MonoBehaviour {
 				anim.applyRootMotion = true;
 			}
 			alerted = true;
-			Meow ();
+			MeowTime.PlayDelayed (0.93f);
 		}
 	}
 
-	IEnumerator Meow()
+	/*IEnumerator Meow()
 	{
 		print (Time.time);
 		yield return new WaitForSeconds (1.0f);
 		MeowTime.Play ();
 		print (Time.time);
 
-	}
+	}*/
 
 }

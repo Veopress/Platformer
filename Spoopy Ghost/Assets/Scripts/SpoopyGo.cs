@@ -6,6 +6,7 @@ public class SpoopyGo : MonoBehaviour {
 
 	Rigidbody2D rb;
 	Animator anim;
+	public AudioSource Paper;
 	public bool leftKey= false, rightKey = false, upKey = false, isSecondJump = false, firstJump = true, phaseKey = false, facingRight = false, stale = false, grounded = false, invis = false, i1 = false, showWindow = false, gotMem = false;
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
@@ -16,7 +17,6 @@ public class SpoopyGo : MonoBehaviour {
 	public static int deathcount;
 	public Image mem;
 	public Button cont;
-	public Rect windowRect = new Rect(1000, 1000, 1000, 1000);
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -61,6 +61,7 @@ public class SpoopyGo : MonoBehaviour {
 	{
 		if (gotMem) 
 		{
+			Paper.Play ();
 			mem.GetComponent<CanvasGroup> ().alpha = 1f;
 			cont.GetComponent<CanvasGroup> ().alpha = 1f;
 		} 
